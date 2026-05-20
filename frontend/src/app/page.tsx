@@ -12,11 +12,12 @@ export default function Home() {
     <main className="min-h-screen bg-[#FBFBFB] ">
       <HeroSection />
       <HomeAboutSection />
+      <StatsSection />
       <ServicesSection />
       <WhyChooseUsSection />
       <ProcessSection />
       <TestimonialsSection />
-      <StatsSection />
+
       <CTASection />
     </main>
   );
