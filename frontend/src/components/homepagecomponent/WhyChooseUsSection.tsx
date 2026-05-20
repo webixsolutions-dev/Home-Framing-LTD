@@ -68,7 +68,7 @@ export default function WhyChooseUsSection() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-20 md:pb-24">
+      <div className=  "relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -80 }}

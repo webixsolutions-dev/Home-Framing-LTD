@@ -19,7 +19,7 @@ const Footer = () => {
                 className="h-36 sm:h-[98px] md:h-[112px] lg:h-[140px] w-auto object-contain"
               />
             </div>
-            <p className="text-base leading-relaxed text-gray-700 font-medium">
+            <p className="text-base leading-relaxed text-gray-700 font-medium text-lg">
               Setting the standard in residential and commercial structural excellence in Calgary. One frame at a time.
             </p>
           </div>
@@ -29,27 +29,27 @@ const Footer = () => {
             <h3 className="font-bold text-[#092336] text-lg mb-6">SERVICES</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Residential Framing
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Commercial Framing
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Basements
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Decks
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/services" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Custom Truss Systems
                 </Link>
               </li>
@@ -61,22 +61,22 @@ const Footer = () => {
             <h3 className="font-bold text-[#092336] text-lg mb-6">COMPANY</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/about" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/projects" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/contact" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/contact" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Contact
                 </Link>
               </li>
@@ -88,14 +88,14 @@ const Footer = () => {
             <h3 className="font-bold text-[#092336] text-lg mb-6">CONTACT</h3>
             <ul className="space-y-3 mb-8">
               <li>
-                <a href="tel:+14039250600" className="text-gray-700 hover:text-[#B95927] transition flex items-center gap-2">
+                <a href="tel:+14039250600" className="text-gray-700 hover:text-[#B95927] transition flex items-center gap-2 text-lg">
                   <span>☎</span> +1(403) 925–0600
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:HomeframingLTD@gmail.com"
-                  className="text-gray-700 hover:text-[#B95927] transition flex items-center gap-2"
+                  className="text-gray-700 hover:text-[#B95927] transition flex items-center gap-2 text-lg"
                 >
                   <span>✉</span> HomeframingLTD@gmail.com
                 </a>
@@ -105,17 +105,17 @@ const Footer = () => {
             <h3 className="font-bold text-[#092336] text-lg mb-6">LEGAL</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/privacy" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/terms" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/material-specs" className="text-gray-700 hover:text-[#B95927] transition">
+                <Link href="/material-specs" className="text-gray-700 hover:text-[#B95927] transition text-lg">
                   Material Specs
                 </Link>
               </li>
@@ -126,7 +126,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-300 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 text-sm text-center lg:text-left">
+            <p className="text-gray-600 text-lgtext-center lg:text-left ">
               © 2025 Home Framing LTD. Structural Excellence Guaranteed.
             </p>
             <div className="flex gap-6">

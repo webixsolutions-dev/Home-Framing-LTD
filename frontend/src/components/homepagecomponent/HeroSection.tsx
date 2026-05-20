@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    // Mobile par height ko 500px fix kiya hai taake lamba na lage, desktop par 100svh hi hai
     <section className="relative w-full min-h-[500px] sm:min-h-[100svh] flex items-start sm:items-center justify-center overflow-hidden">
+      
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,23 +21,27 @@ export default function HeroSection() {
       </div>
 
       {/* Content Container */}
-      {/* Mobile par padding mazeed kam (pt-16) taake compact lage */}
-      <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 pt-16 sm:pt-0 text-center text-white">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-0 text-center text-white">
+        
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="font-bold mb-3 sm:mb-6
-            text-[1.6rem] leading-[2rem]
-            sm:text-[2.5rem] sm:leading-[3rem]
-            md:text-[3rem] md:leading-[3.5rem]
+          className="
+            font-bold mb-4 sm:mb-6
+            text-[1.8rem] leading-[2.3rem]
+            sm:text-[2.6rem] sm:leading-[3.2rem]
+            md:text-[3.2rem] md:leading-[3.8rem]
             lg:text-[4rem] lg:leading-[4.5rem]
-            xl:text-[5rem] xl:leading-[5.5rem]"
+            xl:text-[4.5rem] xl:leading-[5rem]
+          "
         >
           Professional Wood Framing <br className="hidden sm:block" />
           Contractors in{" "}
-          <span className="text-[#B95927]">Calgary & Alberta</span>
+          <span className="text-[#B95927]">
+            Calgary & Alberta
+          </span>
         </motion.h1>
 
         {/* Paragraph */}
@@ -45,18 +49,20 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-6 sm:mb-10
-            max-w-[290px] xs:max-w-sm sm:max-w-2xl lg:max-w-4xl mx-auto
-            text-[0.8rem] leading-[1.3rem]
-            sm:text-[1.1rem] sm:leading-[1.8rem]
-            lg:text-[1.3rem] lg:leading-[2.1rem]
-            text-gray-200"
+          className="
+            mb-6 sm:mb-10
+            max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto
+            text-[0.95rem] leading-[1.7rem]
+            sm:text-[1.1rem] sm:leading-[1.9rem]
+            lg:text-[1.2rem] lg:leading-[2rem]
+            text-gray-200
+          "
         >
-          We provide professional wood framing services for residential projects,
-          custom homes, commercial buildings, and structural modifications in
-          Calgary and across Alberta. Our team focuses on precise workmanship,
-          strong structural details, and reliable project execution from start
-          to finish.
+          We provide professional wood framing services for residential
+          projects, custom homes, commercial buildings, and structural
+          modifications in Calgary and across Alberta. Our team focuses on
+          precise workmanship, strong structural details, and reliable project
+          execution from start to finish.
         </motion.p>
 
         {/* CTA Button */}
@@ -67,16 +73,26 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="inline-block bg-[#B95927] text-white font-bold rounded-md
-              shadow-xl hover:bg-[#a04d20] transition-all transform hover:scale-105
+            className="
+              inline-block
+              bg-[#B95927]
+              text-white
+              font-semibold
+              rounded-xl
+              shadow-xl
+              hover:bg-[#a04d20]
+              transition-all
+              duration-300
+              hover:scale-105
               px-6 py-3
               sm:px-10 sm:py-4
-              text-[0.85rem]
-              sm:text-[1.1rem]"
+              text-sm sm:text-lg
+            "
           >
             Get Your Free Estimate
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

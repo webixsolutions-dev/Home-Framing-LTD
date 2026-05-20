@@ -34,7 +34,7 @@ export default function ServicesSection() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Heading & Paragraph */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
