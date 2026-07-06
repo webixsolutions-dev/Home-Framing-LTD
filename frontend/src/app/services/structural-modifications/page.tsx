@@ -108,6 +108,7 @@ export default function ServicePage4() {
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
           alt="Structural Modifications"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
@@ -184,6 +185,7 @@ export default function ServicePage4() {
                 src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80"
                 alt="Structural Framing"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -257,6 +259,7 @@ export default function ServicePage4() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>

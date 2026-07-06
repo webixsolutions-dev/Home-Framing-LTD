@@ -51,20 +51,7 @@ export default function HomeAboutSection() {
             <div className="mt-10">
               <Link
                 href="/about"
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-                  bg-[#092336]
-                  hover:bg-[#0d2d45]
-                  text-white
-                  font-semibold
-                  px-7
-                  py-4
-                  rounded-xl
-                  transition
-                  duration-300
-                "
+                className="inline-flex items-center justify-center bg-[#092336] hover:bg-[#0d2d45] text-white font-semibold px-7 py-4 rounded-xl transition duration-300"
               >
                 Learn More About Us
               </Link>

@@ -103,6 +103,7 @@ export default function ServicePage3() {
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
           alt="Custom Home Framing"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
@@ -177,6 +178,7 @@ export default function ServicePage3() {
                 src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&q=80"
                 alt="Custom Home"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -244,6 +246,7 @@ export default function ServicePage3() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>

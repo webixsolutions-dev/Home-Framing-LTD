@@ -86,6 +86,7 @@ export default function ServicePage2() {
           src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80"
           alt="Commercial Framing"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
@@ -159,6 +160,7 @@ export default function ServicePage2() {
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"
                 alt="Commercial Construction"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -249,6 +251,7 @@ export default function ServicePage2() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>

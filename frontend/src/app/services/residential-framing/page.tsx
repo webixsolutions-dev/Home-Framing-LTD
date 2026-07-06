@@ -86,6 +86,7 @@ export default function ResidentialFramingPage() {
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
           alt="Residential Framing"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
@@ -159,6 +160,7 @@ export default function ResidentialFramingPage() {
                 src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80"
                 alt="Residential Construction"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -218,6 +220,7 @@ export default function ResidentialFramingPage() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>

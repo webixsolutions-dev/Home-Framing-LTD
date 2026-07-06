@@ -163,26 +163,7 @@ export default function Services() {
             timeline.
           </p>
 
-          <Link href="/contact"   className="
-    inline-flex
-    items-center
-    justify-center
-    bg-[#B95927]
-    hover:bg-[#a44f22]
-    text-white
-    font-semibold
-    text-sm sm:text-base
-    px-6 sm:px-8
-    py-3 sm:py-4
-    rounded-xl
-    transition
-    duration-300
-    w-full sm:w-auto
-    max-w-[260px]
-    mx-auto
-    break-words
-    text-center
-  ">
+          <Link href="/contact" className="inline-flex items-center justify-center bg-[#B95927] hover:bg-[#a44f22] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition duration-300 w-full sm:w-auto max-w-[260px] mx-auto break-words text-center">
             Request Free Quote
           </Link>
 

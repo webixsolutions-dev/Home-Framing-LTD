@@ -31,15 +31,11 @@ export default function StatsSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`
-                flex flex-col items-center justify-center text-center
-                px-6 relative
-                ${
-                  index !== stats.length - 1
-                    ? "lg:border-r lg:border-white/10"
-                    : ""
-                }
-              `}
+              className={`flex flex-col items-center justify-center text-center px-6 relative ${
+                index !== stats.length - 1
+                  ? "lg:border-r lg:border-white/10"
+                  : ""
+              }`}
             >
               {/* Icon */}
               <div className="text-[#B95927] mb-5">{stat.icon}</div>

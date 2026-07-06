@@ -76,16 +76,7 @@ export default function TestimonialsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="
-              bg-white
-              rounded-[2rem]
-              shadow-xl
-              border
-              border-gray-100
-              p-8
-              md:p-14
-              text-center
-            "
+            className="bg-white rounded-[2rem] shadow-xl border border-gray-100 p-8 md:p-14 text-center"
           >
             {/* Quote */}
             <div className="text-6xl text-[#B95927] leading-none mb-6">“</div>
@@ -102,6 +93,7 @@ export default function TestimonialsSection() {
                   src={testimonials[active].image}
                   alt={testimonials[active].name}
                   fill
+                  sizes="80px"
                   className="object-cover"
                 />
               </div>
@@ -120,14 +112,11 @@ export default function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => setActive(index)}
-                className={`
-                  transition-all duration-300 rounded-full
-                  ${
-                    active === index
-                      ? "w-10 h-3 bg-[#092336]"
-                      : "w-3 h-3 bg-gray-300"
-                  }
-                `}
+                className={`transition-all duration-300 rounded-full ${
+                  active === index
+                    ? "w-10 h-3 bg-[#092336]"
+                    : "w-3 h-3 bg-gray-300"
+                }`}
               />
             ))}
           </div>

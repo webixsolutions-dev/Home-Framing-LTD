@@ -80,6 +80,7 @@ export default function ProjectsPage() {
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
           alt="Wood Framing Projects"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />
@@ -142,6 +143,7 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
