@@ -17,6 +17,43 @@ export default function About() {
           </p>
         </div>
 
+        {/* Leadership / Director */}
+        <div className="mb-28">
+          <p className="uppercase tracking-[0.2em] text-sm font-semibold text-[#092336] mb-4">
+            Leadership
+          </p>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-[#092336] mb-14">
+            Meet Our Director
+          </h2>
+
+          <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+              {/* TODO: replace with Amninder Singh's real photo */}
+              <div
+                className="flex-shrink-0 flex h-32 w-32 md:h-40 md:w-40 items-center justify-center rounded-full bg-[#092336] text-white text-4xl md:text-5xl font-bold"
+                aria-hidden="true"
+              >
+                AS
+              </div>
+
+              <div className="text-center sm:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#092336] mb-1">
+                  Amninder Singh
+                </h3>
+
+                <p className="text-[#B95927] font-semibold text-lg uppercase tracking-wide mb-6">
+                  Director
+                </p>
+
+                <p className="text-[#4A5565] text-lg leading-8 max-w-3xl">
+                  {/* TODO: add director bio */}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Our Story */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-28">
           <div>

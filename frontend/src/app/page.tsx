@@ -4,7 +4,6 @@ import WhyChooseUsSection from "@/components/homepagecomponent/WhyChooseUsSectio
 import ProcessSection from "@/components/homepagecomponent/ProcessSection";
 import CTASection from "@/components/homepagecomponent/CTASection";
 import HomeAboutSection from "@/components/homepagecomponent/HomeAboutSection";
-import TestimonialsSection from "@/components/homepagecomponent/TestimonialsSection";
 import StatsSection from "@/components/homepagecomponent/StatsSection";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <ServicesSection />
       <WhyChooseUsSection />
       <ProcessSection />
-      <TestimonialsSection />
 
       <CTASection />
     </main>
