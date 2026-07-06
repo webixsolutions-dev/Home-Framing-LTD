@@ -156,6 +156,13 @@ const Header = () => {
             </Link>
 
             <Link
+              href="/careers"
+              className="text-gray-700 hover:text-[#B95927] font-medium text-lg transition"
+            >
+              CAREERS
+            </Link>
+
+            <Link
               href="/contact"
               className="text-gray-700 hover:text-[#B95927] font-medium text-lg transition"
             >
@@ -365,6 +372,15 @@ const Header = () => {
             >
               <span className="w-2 h-2 rounded-full bg-[#B95927]" />
               PROJECTS
+            </Link>
+
+            <Link
+              href="/careers"
+              onClick={closeAll}
+              className="flex items-center gap-3 py-4 font-bold text-lg text-[#092336]"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#B95927]" />
+              CAREERS
             </Link>
 
             <Link
