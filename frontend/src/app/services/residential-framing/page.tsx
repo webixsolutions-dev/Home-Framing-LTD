@@ -4,6 +4,75 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.homeframingltd.com/services/residential-framing#webpage",
+      "url": "https://www.homeframingltd.com/services/residential-framing",
+      "name": "Residential Framing Services in Calgary | Home Framing LTD",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "mainEntity": {
+        "@id": "https://www.homeframingltd.com/services/residential-framing#service"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.homeframingltd.com/services/residential-framing#service",
+      "name": "Residential Framing Services in Calgary",
+      "serviceType": "Residential Wood Framing",
+      "url": "https://www.homeframingltd.com/services/residential-framing",
+      "description": "Residential wood framing for new homes, custom builds, additions, renovations, basement layouts, interior walls, floors, roofs, openings, and related home construction projects in Calgary.",
+      "provider": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Calgary",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Alberta",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      },
+      "category": "Wood Framing"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.homeframingltd.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Residential Framing",
+          "item": "https://www.homeframingltd.com/services/residential-framing"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function ResidentialFramingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -80,6 +149,10 @@ export default function ResidentialFramingPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* HERO */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center overflow-hidden">
         <Image

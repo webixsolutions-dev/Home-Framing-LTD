@@ -1,6 +1,49 @@
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.homeframingltd.com/contact#webpage",
+      "url": "https://www.homeframingltd.com/contact",
+      "name": "Contact Home Framing LTD | Calgary Framing Contractor",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "mainEntity": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://www.homeframingltd.com/contact"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

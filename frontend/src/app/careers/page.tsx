@@ -1,6 +1,43 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.homeframingltd.com/careers#webpage",
+      "url": "https://www.homeframingltd.com/careers",
+      "name": "Careers at Home Framing LTD | Calgary",
+      "description": "Explore current career opportunities with Home Framing LTD in Calgary.",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://www.homeframingltd.com/careers"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export const metadata: Metadata = {
   title: "Careers | Home Framing LTD",
   description:
@@ -20,10 +57,6 @@ interface Job {
   image: string;
   description: string;
   benefits: string[];
-  /** Numeric hourly wage used for JobPosting structured data. */
-  salaryValue: number;
-  /** ISO employmentType used for JobPosting structured data. */
-  employmentType: string;
 }
 
 const CONTACT = {
@@ -52,8 +85,6 @@ const jobs: Job[] = [
       "Opportunities for career growth",
       "Supportive team environment",
     ],
-    salaryValue: 37,
-    employmentType: "FULL_TIME",
   },
   {
     slug: "administrative-assistant",
@@ -74,49 +105,8 @@ const jobs: Job[] = [
       "Stable full-time employment",
       "Professional development opportunities",
     ],
-    salaryValue: 23,
-    employmentType: "FULL_TIME",
   },
 ];
-
-// Structured data (JSON-LD) shared values for JobPosting schema.
-const DATE_POSTED = "2026-07-07";
-const VALID_THROUGH = "2026-12-31";
-
-function jobPostingJsonLd(job: Job) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
-    title: job.title,
-    description: job.description,
-    datePosted: DATE_POSTED,
-    validThrough: VALID_THROUGH,
-    employmentType: job.employmentType,
-    hiringOrganization: {
-      "@type": "Organization",
-      name: "Home Framing LTD",
-      sameAs: "https://homeframingltd.com",
-    },
-    jobLocation: {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Calgary",
-        addressRegion: "Alberta",
-        addressCountry: "CA",
-      },
-    },
-    baseSalary: {
-      "@type": "MonetaryAmount",
-      currency: "CAD",
-      value: {
-        "@type": "QuantitativeValue",
-        value: job.salaryValue,
-        unitText: "HOUR",
-      },
-    },
-  };
-}
 
 /** Small icon set for the facts grid — inherits color via currentColor. */
 const factIcons = {
@@ -333,17 +323,10 @@ function JobCard({ job }: { job: Job }) {
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gray-200">
-      {/* JobPosting structured data for both openings */}
-      {jobs.map((job) => (
-        <script
-          key={job.slug}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jobPostingJsonLd(job)),
-          }}
-        />
-      ))}
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* Hero */}
       <section className="bg-[#092336] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-20 md:py-28 text-center">

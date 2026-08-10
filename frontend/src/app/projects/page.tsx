@@ -4,6 +4,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.homeframingltd.com/projects#webpage",
+      "url": "https://www.homeframingltd.com/projects",
+      "name": "Wood Framing Projects in Calgary | Home Framing LTD",
+      "description": "Explore residential, commercial, custom home, addition, renovation, interior, roof, and retail framing projects completed by Home Framing LTD in Calgary.",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.homeframingltd.com/projects"
+        }
+      ]
+    }
+  ]
+} as const;
+
 const filters = [
   "All",
   "Residential",
@@ -74,6 +111,10 @@ export default function ProjectsPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* HERO */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
         <Image

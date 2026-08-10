@@ -1,6 +1,55 @@
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.homeframingltd.com/about#webpage",
+      "url": "https://www.homeframingltd.com/about",
+      "name": "About Home Framing LTD | Calgary Framing Contractors",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.homeframingltd.com/about#amninder-singh",
+      "name": "Amninder Singh",
+      "jobTitle": "Director",
+      "worksFor": {
+        "@id": "https://www.homeframingltd.com/#business"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.homeframingltd.com/about"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-20">
         {/* Hero Section */}
         <div className="max-w-5xl mb-24">

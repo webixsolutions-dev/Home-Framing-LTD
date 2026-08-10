@@ -2,6 +2,89 @@
 import Link from "next/link";
 
 import { useState } from "react";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.homeframingltd.com/services#webpage",
+      "url": "https://www.homeframingltd.com/services",
+      "name": "Wood Framing Services in Calgary | Home Framing LTD",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "mainEntity": {
+        "@id": "https://www.homeframingltd.com/services#catalog"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.homeframingltd.com/services#catalog",
+      "name": "Home Framing LTD Calgary Framing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.homeframingltd.com/services/residential-framing#service",
+            "name": "Residential Framing Services in Calgary",
+            "url": "https://www.homeframingltd.com/services/residential-framing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.homeframingltd.com/services/commercial-framing#service",
+            "name": "Commercial Framing Services in Calgary",
+            "url": "https://www.homeframingltd.com/services/commercial-framing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.homeframingltd.com/services/custom-home-framing#service",
+            "name": "Custom Home Framing Services in Calgary",
+            "url": "https://www.homeframingltd.com/services/custom-home-framing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.homeframingltd.com/services/structural-modifications#service",
+            "name": "Structural Modification Services in Calgary",
+            "url": "https://www.homeframingltd.com/services/structural-modifications"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.homeframingltd.com/services"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function Services() {
   const services = [
     {
@@ -61,6 +144,10 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

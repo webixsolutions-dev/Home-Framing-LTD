@@ -4,6 +4,75 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.homeframingltd.com/services/custom-home-framing#webpage",
+      "url": "https://www.homeframingltd.com/services/custom-home-framing",
+      "name": "Custom Home Framing Services in Calgary | Home Framing LTD",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "mainEntity": {
+        "@id": "https://www.homeframingltd.com/services/custom-home-framing#service"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.homeframingltd.com/services/custom-home-framing#service",
+      "name": "Custom Home Framing Services in Calgary",
+      "serviceType": "Custom Home Framing",
+      "url": "https://www.homeframingltd.com/services/custom-home-framing",
+      "description": "Custom home framing for unique house designs, open-concept layouts, detailed rooflines, vaulted ceilings, large openings, walls, floors, structural supports, and project-specific framing plans in Calgary.",
+      "provider": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Calgary",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Alberta",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      },
+      "category": "Wood Framing"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.homeframingltd.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Custom Home Framing",
+          "item": "https://www.homeframingltd.com/services/custom-home-framing"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function ServicePage3() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -97,6 +166,10 @@ export default function ServicePage3() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* HERO */}
       <section className="relative h-[72vh] min-h-[650px] flex items-center overflow-hidden">
         <Image

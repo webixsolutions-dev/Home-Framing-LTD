@@ -4,6 +4,75 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.homeframingltd.com/services/structural-modifications#webpage",
+      "url": "https://www.homeframingltd.com/services/structural-modifications",
+      "name": "Structural Modification Services in Calgary | Home Framing LTD",
+      "isPartOf": {
+        "@id": "https://www.homeframingltd.com/#website"
+      },
+      "about": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "mainEntity": {
+        "@id": "https://www.homeframingltd.com/services/structural-modifications#service"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.homeframingltd.com/services/structural-modifications#service",
+      "name": "Structural Modification Services in Calgary",
+      "serviceType": "Structural Modification and Framing",
+      "url": "https://www.homeframingltd.com/services/structural-modifications",
+      "description": "Structural framing modifications for renovations, additions, load-bearing wall changes, wall openings, beams, headers, reinforcements, layout changes, and structural upgrades in Calgary.",
+      "provider": {
+        "@id": "https://www.homeframingltd.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Calgary",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Alberta",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      },
+      "category": "Wood Framing"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.homeframingltd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.homeframingltd.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Structural Modification",
+          "item": "https://www.homeframingltd.com/services/structural-modifications"
+        }
+      ]
+    }
+  ]
+} as const;
+
 export default function ServicePage4() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -102,6 +171,10 @@ export default function ServicePage4() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       {/* HERO */}
       <section className="relative h-[72vh] min-h-[650px] flex items-center overflow-hidden">
         <Image
