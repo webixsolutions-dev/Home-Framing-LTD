@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Home Framing LTD',
+  description: 'Review the terms of service for using the Home Framing LTD website and information related to our framing services in Calgary.',
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Home Framing LTD',
+  description: 'Read the Home Framing LTD privacy policy to learn how information submitted through our website is collected, used and protected.',
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

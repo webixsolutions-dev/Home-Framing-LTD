@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Framing Material Specifications | Home Framing LTD',
+  description: 'Review framing material specifications and information used by Home Framing LTD for residential and commercial wood framing projects.',
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

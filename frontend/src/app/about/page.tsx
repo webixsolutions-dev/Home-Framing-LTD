@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Home Framing LTD | Calgary Framing Company',
+  description: 'Learn about Home Framing LTD, a Calgary framing company providing reliable residential, commercial, custom home and structural framing services.',
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [

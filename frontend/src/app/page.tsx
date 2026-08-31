@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import HeroSection from "@/components/homepagecomponent/HeroSection";
 import ServicesSection from "@/components/homepagecomponent/ServicesSection";
 import WhyChooseUsSection from "@/components/homepagecomponent/WhyChooseUsSection";
@@ -5,6 +6,11 @@ import ProcessSection from "@/components/homepagecomponent/ProcessSection";
 import CTASection from "@/components/homepagecomponent/CTASection";
 import HomeAboutSection from "@/components/homepagecomponent/HomeAboutSection";
 import StatsSection from "@/components/homepagecomponent/StatsSection";
+
+export const metadata: Metadata = {
+  title: 'Wood Framing Contractors in Calgary | Home Framing LTD',
+  description: 'Professional wood framing contractors in Calgary for residential, commercial, custom home and structural framing projects. Request a free estimate.',
+};
 
 const schema = {
   "@context": "https://schema.org",

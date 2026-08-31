@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Home Framing LTD',
+  description: 'Contact Home Framing LTD for residential, commercial, custom home or structural framing in Calgary. Share your project and request a quote.',
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
