@@ -203,14 +203,7 @@ export default function ServicePage3() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
-              </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition"
-              >
-                Contact Us
+                Get a Custom Home Framing Quote
               </Link>
             </div>
           </div>
@@ -236,11 +229,17 @@ export default function ServicePage3() {
 
                 <p className="text-[#4A5565] text-lg leading-8">
                   <span className="font-bold"> At Home Framing LTD</span>, we
-                  work with homeowners, builders, and contractors who need
-                  reliable house framing support for custom residential
-                  projects. Whether the home includes open-concept spaces,
-                  vaulted ceilings, complex roof structures, large window
-                  openings, or unique room layouts, our team focuses on building
+                  work with{" "}
+                  <Link href="/services/residential-framing" className="text-[#B95927] hover:underline font-medium">
+                    standard residential framing
+                  </Link>{" "}
+                  projects as well as custom residential
+                  builds. Whether the home includes open-concept spaces,
+                  vaulted ceilings, complex roof structures,{" "}
+                  <Link href="/services/structural-modifications" className="text-[#B95927] hover:underline font-medium">
+                    large structural openings and beam support
+                  </Link>
+                  , or unique room layouts, our team focuses on building
                   the frame with accuracy and care.
                 </p>
               </div>
@@ -300,11 +299,7 @@ export default function ServicePage3() {
             </h2>
 
             <p className="text-[#4A5565] text-lg leading-8">
-              Custom home framing cost depends on the size, layout, design
-              complexity, and structural requirements of the project. A simple
-              house frame will usually have a different scope than a custom
-              build with open layouts, large windows, detailed rooflines, or
-              special framing details.
+              We provide complete framing support tailored to the unique architectural plans of your custom home build.
             </p>
           </div>
 
@@ -392,14 +387,7 @@ export default function ServicePage3() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
-              </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition text-white"
-              >
-                Contact Us
+                Get a Custom Home Framing Quote
               </Link>
             </div>
           </div>

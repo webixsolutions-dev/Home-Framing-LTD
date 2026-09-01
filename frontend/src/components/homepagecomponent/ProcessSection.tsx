@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link"; // Added Link import
 
 export default function ProcessSection() {
   return (
@@ -219,7 +220,11 @@ export default function ProcessSection() {
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                     We make sure the framing scope is finished properly and the
-                    project is ready for the next trade or construction phase.
+                    project is ready for the next trade or construction phase. You can also{" "}
+                    <Link href="/projects" className="text-[#B95927] hover:underline font-semibold">
+                      see completed framing projects
+                    </Link>
+                    .
                   </p>
                 </div>
               </div>

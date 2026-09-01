@@ -173,8 +173,11 @@ export default function ResidentialFramingPage() {
             </h1>
 
             <p className="text-lg md:text-xl leading-9 text-gray-200 mb-10">
-              Home Framing LTD provides residential wood framing for new homes,
-              custom builds, additions, renovations, basement layouts, and
+              Home Framing LTD provides residential wood framing for new homes,{" "}
+              <Link href="/services/custom-home-framing" className="text-[#B95927] hover:underline font-medium">
+                custom home framing
+              </Link>
+              , additions, renovations, basement layouts, and
               interior spaces. Our team focuses on accurate layout, clean
               workmanship, and dependable framing support that helps every home
               project move forward with confidence.
@@ -219,8 +222,11 @@ export default function ResidentialFramingPage() {
                 <p className="text-[#4A5565] text-lg leading-8">
                   <span className="font-bold">At Home Framing LTD</span>, we
                   work with homeowners, builders, and contractors who need
-                  reliable framing for new residential construction, additions,
-                  and basement developments. Every project is handled with
+                  reliable framing for new residential construction,{" "}
+                  <Link href="/services/structural-modifications" className="text-[#B95927] hover:underline font-medium">
+                    structural modification and renovation framing
+                  </Link>
+                  . Every project is handled with
                   careful measurements, organized site work, and attention to
                   the details that help the next stage of construction move
                   smoothly.

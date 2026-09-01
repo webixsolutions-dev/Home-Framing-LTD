@@ -68,7 +68,7 @@ export default function WhyChooseUsSection() {
         </svg>
       </div>
 
-      <div className=  "relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -94,7 +94,7 @@ export default function WhyChooseUsSection() {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
-              Why Choose FramingLtd Framing Contractors
+              Why Choose Home Framing LTD Framing Contractors
             </h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed">
               Choosing a framing contractor is about more than getting the frame built. You need a team that shows up on time, understands the project details, works safely, and delivers framing work that is accurate, strong, and ready for the next stage of construction.

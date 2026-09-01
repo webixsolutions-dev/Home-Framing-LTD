@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-
 import { useState } from "react";
 
 const schema = {
@@ -89,28 +88,48 @@ export default function Services() {
   const services = [
     {
       title: "Residential Framing",
-      description:
-        "We provide residential wood framing for new homes, infill builds, basement layouts, additions, and single-family construction projects. Our team focuses on accurate wall, floor, and roof framing so the structure is solid, level, and ready for the next stage of construction.",
+      link: "/services/residential-framing",
+      description: (
+        <>
+          We provide <Link href="/services/residential-framing" className="text-[#B95927] hover:underline font-medium">residential wood framing</Link> for new homes, infill builds, basement layouts, additions, and single-family construction projects. Our team focuses on accurate wall, floor, and roof framing so the structure is solid, level, and ready for the next stage of construction.
+        </>
+      ),
     },
     {
       title: "Commercial Framing",
-      description:
-        "Our commercial framing services support offices, retail spaces, tenant improvements, and small to mid-sized business construction projects. We work with builders and contractors to deliver clean, organized framing that keeps the project moving safely and efficiently.",
+      link: "/services/commercial-framing",
+      description: (
+        <>
+          Our <Link href="/services/commercial-framing" className="text-[#B95927] hover:underline font-medium">commercial framing services</Link> support offices, retail spaces, tenant improvements, and small to mid-sized business construction projects. We work with builders and contractors to deliver clean, organized framing that keeps the project moving safely and efficiently.
+        </>
+      ),
     },
     {
       title: "Custom Homes",
-      description:
-        "Custom home framing requires more detail than a standard build. We frame unique layouts, open-concept spaces, custom rooflines, large openings, and architect-designed plans with careful attention to measurements, structure, and design requirements.",
+      link: "/services/custom-home-framing",
+      description: (
+        <>
+          <Link href="/services/custom-home-framing" className="text-[#B95927] hover:underline font-medium">Custom home framing</Link> requires more detail than a standard build. We frame unique layouts, open-concept spaces, custom rooflines, large openings, and architect-designed plans with careful attention to measurements, structure, and design requirements.
+        </>
+      ),
     },
     {
       title: "Interior Framing",
-      description:
-        "Our interior framing services help shape the layout and function of homes and commercial spaces. We frame interior walls, partitions, bulkheads, room divisions, and basement layouts with clean workmanship and accurate placement.",
+      link: "/services/residential-framing", // Temporary link as per guide
+      description: (
+        <>
+          Our <Link href="/services/residential-framing" className="text-[#B95927] hover:underline font-medium">interior framing services</Link> help shape the layout and function of homes and commercial spaces. We frame interior walls, partitions, bulkheads, room divisions, and basement layouts with clean workmanship and accurate placement.
+        </>
+      ),
     },
     {
       title: "Additions & Renovations",
-      description:
-        "We provide framing support for home additions, remodels, basement developments, layout changes, and structural updates. Our team works carefully around existing structures to connect new framing properly and help the renovation move forward smoothly.",
+      link: "/services/structural-modifications",
+      description: (
+        <>
+          We provide framing support for home additions, remodels, basement developments, layout changes, and <Link href="/services/structural-modifications" className="text-[#B95927] hover:underline font-medium">structural modification framing</Link>. Our team works carefully around existing structures to connect new framing properly and help the renovation move forward smoothly.
+        </>
+      ),
     },
   ];
 
@@ -206,7 +225,9 @@ export default function Services() {
               </div>
 
               <h3 className="text-2xl font-bold text-[#092336] mb-5">
-                {service.title}
+                <Link href={service.link} className="hover:text-[#B95927] transition-colors">
+                  {service.title}
+                </Link>
               </h3>
 
               <p className="text-[#4A5565] leading-8 text-[17px]">
@@ -257,54 +278,51 @@ export default function Services() {
         </div>
 
         {/* FAQ Section */}
-      {/* FAQ Section */}
-<div>
-  
-  <h2 className="text-3xl md:text-4xl font-bold text-[#092336] mb-14 text-center">
-    FAQ’s
-  </h2>
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#092336] mb-14 text-center">
+            FAQ’s
+          </h2>
 
-  <div className="space-y-5 max-w-5xl mx-auto">
-    
-    {faqs.map((faq, index) => {
-      const [openIndex, setOpenIndex] = useState<number | null>(0);
+          <div className="space-y-5 max-w-5xl mx-auto">
+            
+            {faqs.map((faq, index) => {
+              const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-      return (
-        <div
-          key={index}
-          className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
-        >
-          
-          <button
-            onClick={() =>
-              setOpenIndex(openIndex === index ? null : index)
-            }
-            className="w-full flex items-center justify-between text-left p-6"
-          >
-            <h3 className="text-lg md:text-xl font-semibold text-[#092336] pr-4">
-              {faq.question}
-            </h3>
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
+                >
+                  
+                  <button
+                    onClick={() =>
+                      setOpenIndex(openIndex === index ? null : index)
+                    }
+                    className="w-full flex items-center justify-between text-left p-6"
+                  >
+                    <h3 className="text-lg md:text-xl font-semibold text-[#092336] pr-4">
+                      {faq.question}
+                    </h3>
 
-            <span className="text-2xl text-[#092336]">
-              {openIndex === index ? "−" : "+"}
-            </span>
-          </button>
+                    <span className="text-2xl text-[#092336]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </button>
 
-          {openIndex === index && (
-            <div className="px-6 pb-6">
-              <p className="text-[#4A5565] leading-8">
-                {faq.answer}
-              </p>
-            </div>
-          )}
+                  {openIndex === index && (
+                    <div className="px-6 pb-6">
+                      <p className="text-[#4A5565] leading-8">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  )}
 
+                </div>
+              );
+            })}
+
+          </div>
         </div>
-      );
-    })}
-
-  </div>
-
-</div>
 
       </div>
     </div>

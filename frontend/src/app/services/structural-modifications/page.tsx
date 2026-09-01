@@ -209,14 +209,7 @@ export default function ServicePage4() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
-              </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition"
-              >
-                Contact Us
+                Request a Structural Modification Quote
               </Link>
             </div>
           </div>
@@ -242,7 +235,11 @@ export default function ServicePage4() {
 
                 <p className="text-[#4A5565] text-lg leading-8">
                   <span className="font-bold">At Home Framing LTD</span>, we
-                  support homeowners, builders, contractors, and property owners
+                  support homeowners,{" "}
+                  <Link href="/services/commercial-framing" className="text-[#B95927] hover:underline font-medium">
+                    commercial framing services
+                  </Link>{" "}
+                  and property owners
                   with structural framing changes for renovation and
                   construction projects. Whether the work involves a
                   load-bearing wall, beam support, header framing, room opening,
@@ -404,14 +401,7 @@ export default function ServicePage4() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
-              </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition text-white"
-              >
-                Contact Us
+                Request a Structural Modification Quote
               </Link>
             </div>
           </div>
@@ -423,7 +413,7 @@ export default function ServicePage4() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-[#092336]">
-              FAQ Section
+              Frequently Asked Questions About Structural Modifications
             </h2>
           </div>
 

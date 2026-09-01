@@ -185,46 +185,45 @@ export default function ServicePage2() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
+                Request a Free Commercial Framing Quote
               </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition"
-              >
-                Contact Us
-              </Link>
+              {/* Duplicate button removed as per guide */}
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 1 */}
+      {/* MERGED SECTION (Section 1 & 2 content combined as per guide) */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#092336] leading-tight mb-8">
-                Wood Framing Support for Commercial Builds
+                Why Choose Home Framing LTD for Commercial Framing?
               </h2>
 
               <div className="space-y-6">
                 <p className="text-[#4A5565] text-lg leading-8">
-                  Commercial framing requires more than basic construction work.
-                  It needs accurate planning, clear communication, and the
-                  ability to coordinate with contractors, builders, and other
-                  trades on active job sites.
+                  Commercial framing needs to be done right from the start so the rest of the construction work can move ahead without unnecessary problems. At Home Framing LTD, we focus on accurate framing, clear communication, and keeping the job site organized throughout the project.
                 </p>
 
-                <p className="text-[#4A5565] text-lg leading-8">
-                  At Home Framing LTD, we provide commercial framing services
-                  for business spaces that need clean structure, proper layout,
-                  and reliable execution. Whether the project involves a new
-                  commercial build, office layout, retail space, tenant
-                  improvement, or commercial renovation, our team works to
-                  deliver framing that is strong, organized, and ready for the
-                  next stage of construction.
-                </p>
+                <div>
+                    <h3 className="text-xl font-bold text-[#092336] mb-2 mt-4">Built According to Project Plans</h3>
+                    <p className="text-[#4A5565] text-lg leading-8">
+                      We follow the drawings and site requirements carefully to make sure walls, openings, and other framing details are completed properly.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold text-[#092336] mb-2 mt-4">Reliable On-Site Coordination</h3>
+                    <p className="text-[#4A5565] text-lg leading-8">
+                      Our team works with contractors, builders, and other trades to keep the framing work on schedule and ready for the next stage. Whether the project involves an office layout, retail space, tenant improvement, or{" "}
+                      <Link href="/services/structural-modifications" className="text-[#B95927] hover:underline font-medium">
+                        structural modification services
+                      </Link>
+                      , we deliver strong results.
+                    </p>
+                </div>
               </div>
             </div>
 
@@ -237,31 +236,6 @@ export default function ServicePage2() {
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 2 */}
-      <section className="pb-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#092336] mb-8">
-            Reliable Framing for Commercial Builds
-          </h2>
-
-          <div className="space-y-6">
-            <p className="text-[#4A5565] text-lg leading-9">
-              Commercial framing requires accurate planning, clear
-              communication, and proper coordination with contractors, builders,
-              and other trades. At Home Framing LTD, we provide framing support
-              for office spaces, retail units, tenant improvements, business
-              renovations, and small to mid-sized commercial builds.
-            </p>
-
-            <p className="text-[#4A5565] text-lg leading-9">
-              Our team focuses on clean layout, safe site practices, and
-              dependable execution so the framing stage is completed properly
-              and your project is ready for the next phase of construction.
-            </p>
           </div>
         </div>
       </section>
@@ -396,15 +370,9 @@ export default function ServicePage2() {
                 href="/contact"
                 className="bg-[#B95927] hover:bg-[#a44f22] text-white px-8 py-4 rounded-xl font-semibold transition"
               >
-                Request a Quote
+                Request a Free Commercial Framing Quote
               </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white/20 hover:bg-white hover:text-[#092336] px-8 py-4 rounded-xl font-semibold transition text-white"
-              >
-                Contact Us
-              </Link>
+              {/* Duplicate button removed as per guide */}
             </div>
           </div>
         </div>
@@ -423,6 +391,12 @@ export default function ServicePage2() {
             commercial framing support built around your project scope,
             schedule, and construction needs.
           </p>
+          
+          <div className="mt-8 pt-6 border-t border-gray-200">
+             <Link href="/projects" className="text-[#B95927] hover:underline font-semibold text-lg inline-flex items-center">
+                See commercial framing projects we have completed <span className="ml-2">→</span>
+             </Link>
+          </div>
         </div>
       </section>
 

@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link"; // Added Link import
 
 export default function ServicesSection() {
   const containerVariants: Variants = {
@@ -47,8 +48,11 @@ export default function ServicesSection() {
             Wood Framing Services Built for Strong, Reliable Structures
           </h2>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-2">
-            Strong structures start with accurate framing. We provide
-            residential framing, custom home framing, commercial framing, and
+            Strong structures start with accurate framing.{" "}
+            <Link href="/services" className="text-[#B95927] hover:underline font-medium">
+              view all wood framing services
+            </Link>{" "}
+            We provide residential framing, custom home framing, commercial framing, and
             structural modification services with careful planning, quality
             materials, and dependable workmanship. Every project is built with
             attention to strength, precision, and long-term durability.
@@ -66,7 +70,7 @@ export default function ServicesSection() {
           {/* Service Card 1 - Left to Right */}
           <motion.div
             variants={leftCard}
-            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col"
           >
             <div className="relative h-48 sm:h-56 md:h-64">
               <Image
@@ -77,23 +81,28 @@ export default function ServicesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 sm:p-5 md:p-6">
+            <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#092336] mb-2 sm:mb-3 md:mb-4">
                 Residential Framing
               </h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                 Reliable residential framing for new homes, additions, garages,
                 basements, and home construction projects. We focus on accurate
                 layouts, strong framing details, and clean workmanship to
                 support safe, durable, and long-lasting home structures.
               </p>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link href="/services/residential-framing" className="text-[#B95927] hover:underline font-semibold text-sm md:text-base inline-flex items-center">
+                  Residential Framing Services in Calgary <span className="ml-1 text-lg">→</span>
+                </Link>
+              </div>
             </div>
           </motion.div>
 
           {/* Service Card 2 - Right to Left */}
           <motion.div
             variants={rightCard}
-            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col"
           >
             <div className="relative h-48 sm:h-56 md:h-64">
               <Image
@@ -104,24 +113,29 @@ export default function ServicesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 sm:p-5 md:p-6">
+            <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#092336] mb-2 sm:mb-3 md:mb-4">
                 Commercial Framing
               </h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                 Professional commercial framing for business spaces, commercial
                 buildings, and construction projects that require reliable
                 coordination and strong execution. Our team focuses on
                 structural accuracy, efficient workmanship, and long-term
                 performance.
               </p>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link href="/services/commercial-framing" className="text-[#B95927] hover:underline font-semibold text-sm md:text-base inline-flex items-center">
+                  Commercial Framing Services <span className="ml-1 text-lg">→</span>
+                </Link>
+              </div>
             </div>
           </motion.div>
 
           {/* Service Card 3 - Left to Right */}
           <motion.div
             variants={leftCard}
-            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col"
           >
             <div className="relative h-48 sm:h-56 md:h-64">
               <Image
@@ -132,24 +146,29 @@ export default function ServicesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 sm:p-5 md:p-6">
+            <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#092336] mb-2 sm:mb-3 md:mb-4">
                 Custom Home Framing
               </h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                 Custom home framing requires careful planning, precision, and
                 attention to unique architectural details. We work with project
                 plans and structural requirements to help bring custom home
                 designs to life with strength, accuracy, and dependable
                 craftsmanship.
               </p>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link href="/services/custom-home-framing" className="text-[#B95927] hover:underline font-semibold text-sm md:text-base inline-flex items-center">
+                  Custom Home Framing <span className="ml-1 text-lg">→</span>
+                </Link>
+              </div>
             </div>
           </motion.div>
 
           {/* Service Card 4 - Right to Left */}
           <motion.div
             variants={rightCard}
-            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+            className="bg-[#FBFBFB] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col"
           >
             <div className="relative h-48 sm:h-56 md:h-64">
               <Image
@@ -160,16 +179,21 @@ export default function ServicesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 sm:p-5 md:p-6">
+            <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#092336] mb-2 sm:mb-3 md:mb-4">
                 Structural Modification
               </h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                 Structural modification services for renovations, layout
                 changes, wall openings, reinforcements, and property upgrades.
                 We handle framing changes with careful planning, safety, and
                 attention to structural strength and long-term durability.
               </p>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link href="/services/structural-modifications" className="text-[#B95927] hover:underline font-semibold text-sm md:text-base inline-flex items-center">
+                  Structural Modification Services <span className="ml-1 text-lg">→</span>
+                </Link>
+              </div>
             </div>
           </motion.div>
         </motion.div>
