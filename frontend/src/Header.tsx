@@ -6,11 +6,9 @@ import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const closeAll = () => {
     setIsMenuOpen(false);
-    setIsServicesOpen(false);
   };
 
   return (
@@ -70,83 +68,13 @@ const Header = () => {
               ABOUT
             </Link>
 
-            {/* Desktop Services Dropdown */}
-            <div className="relative group h-full flex items-center">
-              <button className="text-gray-700 hover:text-[#B95927] font-medium text-lg flex items-center gap-1 transition">
-                SERVICES
-                <svg
-                  className="w-3.5 h-3.5 mt-0.5 transition-transform group-hover:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2.5}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {/* Dropdown */}
-              <div className="pointer-events-none absolute left-0 top-full mt-4 w-[340px] rounded-2xl border border-gray-100 bg-white shadow-2xl opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50 p-6">
-                {/* Top Row */}
-                <div className="flex items-center justify-between gap-5 mb-6">
-                  <Link
-                    href="/services"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition whitespace-nowrap"
-                  >
-                    • All Services
-                  </Link>
-
-                  <Link
-                    href="/services/structural-modifications"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition whitespace-nowrap"
-                  >
-                    • Structural Modification
-                  </Link>
-                </div>
-
-                {/* Remaining Links */}
-                <div className="flex flex-col gap-5">
-                  <Link
-                    href="/services/residential-framing"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition"
-                  >
-                    • Residential Framing
-                  </Link>
-
-                  <Link
-                    href="/services/commercial-framing"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition"
-                  >
-                    • Commercial Framing
-                  </Link>
-
-                  <Link
-                    href="/services/custom-home-framing"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition"
-                  >
-                    • Custom Home Framing
-                  </Link>
-
-                  {/* <Link
-                    href="/services/page5"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition"
-                  >
-                    • Basement Framing
-                  </Link> */}
-
-                  {/* <Link
-                    href="/services/page6"
-                    className="text-[17px] font-medium text-[#092336] hover:text-[#B95927] transition"
-                  >
-                    • Deck Framing
-                  </Link> */}
-                </div>
-              </div>
-            </div>
+            {/* Desktop Services Direct Link (Dropdown Removed) */}
+            <Link
+              href="/services"
+              className="text-gray-700 hover:text-[#B95927] font-medium text-lg transition"
+            >
+              SERVICES
+            </Link>
 
             <Link
               href="/projects"
@@ -270,100 +198,15 @@ const Header = () => {
               ABOUT
             </Link>
 
-            {/* Mobile Services */}
-            <div className="py-1">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="w-full flex items-center justify-between py-3 font-bold text-lg text-[#092336]"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-[#B95927]" />
-                  SERVICES
-                </span>
-
-                <svg
-                  className={`w-5 h-5 transition-transform duration-200 ${
-                    isServicesOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2.5}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {isServicesOpen && (
-                <div className="mt-3 ml-5 bg-gray-50 rounded-2xl p-5 shadow-sm">
-                  {/* Top Row */}
-                  <div className="flex items-center justify-between gap-4 mb-5">
-                    <Link
-                      href="/services"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336] whitespace-nowrap"
-                    >
-                      • All Services
-                    </Link>
-
-                    <Link
-                      href="/services/page4"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336] whitespace-nowrap"
-                    >
-                      • Structural Modification
-                    </Link>
-                  </div>
-
-                  {/* Remaining */}
-                  <div className="flex flex-col gap-4">
-                    <Link
-                      href="/services/page1"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336]"
-                    >
-                      • Residential Framing
-                    </Link>
-
-                    <Link
-                      href="/services/page2"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336]"
-                    >
-                      • Commercial Framing
-                    </Link>
-
-                    <Link
-                      href="/services/page3"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336]"
-                    >
-                      • Custom Home Framing
-                    </Link>
-
-                    <Link
-                      href="/services/page5"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336]"
-                    >
-                      • Basement Framing
-                    </Link>
-
-                    <Link
-                      href="/services/page6"
-                      onClick={closeAll}
-                      className="text-base font-medium text-[#092336]"
-                    >
-                      • Deck Framing
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* Mobile Services Direct Link (Dropdown Removed) */}
+            <Link
+              href="/services"
+              onClick={closeAll}
+              className="flex items-center gap-3 py-4 font-bold text-lg text-[#092336]"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#B95927]" />
+              SERVICES
+            </Link>
 
             <Link
               href="/projects"
